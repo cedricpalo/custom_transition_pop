@@ -1,16 +1,8 @@
 # custom_transition_pop
 
-A new Flutter project.
+This project demonstrates the problem of using context.pop() on a page that had a custom transition.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## how to reproduce
+On a page without custom transition, we can either use context.pop() or Navigator.pop(context) without any problem.
+-> click on normal transition, and then click on any button
+On a page with custom transition, Navigator.pop(context) works, but contex.pop() raises an Exception.
